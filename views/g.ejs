@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><%- include ('layouts/head'); -%> <body><%- include ('layouts/header'); -%><%- include ('layouts/navigation'); -%> <main class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="main">
+              <div class="container">
+                <div class="form-content">
+                  <div class="form">
+                    <form class="requires-validation" method="GET" action="/g" novalidate>
+                      <div class="col-md-12 mb-3">
+                        <label for="licensenumber">License Number</label>
+                        <input class="form-control" type="text" name="licensenumber" id="licensenumber" placeholder="License Number" minlength="8" maxlength="8" required />
+                        <span></span>
+                        <div class="invalid-feedback"> License Number is required. </div>
+                      </div>
+                      <div class="form-button mt-3">
+                        <button id="submit" type="submit" class="btn btn-primary"> Submit </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+                <% if (driverDetails.fname != "default") { %>
+                    <%-
+      include('layouts/driverDetails', {driverDetails: driverDetails}) -%>
+                        <%} else { %>
+                            <div class="container position-relative px-4 px-lg-5">
+                                <div class="page-heading">
+                                    <h1>Hey,
+                                        <%= driverDetails.username %>
+                                    </h1>
+                                    <h5 class="">Please fill up the G2 form first!</h5>
+                                </div>
+                            </div>
+                            <% } %>
+    </main><%- include ('layouts/footer'); -%> </body>
+</html>

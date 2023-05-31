@@ -1,0 +1,23 @@
+{
+  "name": "prajapati_a1_p1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
+    "json": "^11.0.0",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.8",
+    "nodemon": "^2.0.16"
+  },
+  "description": ""
+}

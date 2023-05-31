@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('layouts/head'); -%>
+  <body>
+
+    <%- include ('layouts/header'); -%>
+    <%- include ('layouts/navigation'); -%>
+  <main class="mb-4" style="width: 40%; margin-left: 150px; padding: 0px; display: inline-block; border: 1px solid gray;">
+      <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-7">
+                  <div class="my-5">
+                      <form action="/users/signup" method="post">
+                          <h2>Sign Up</h2>
+                          <div class="form-floating">
+                              <input class="form-control" name="username" id="username" type="text" placeholder="Username..." />
+                              <label for="username">Username</label>
+                              <div class="invalid-feedback">Please enter Username</div>
+                          </div>
+                          <div class="form-floating">
+                              <input class="form-control" name="password" id="password" type="password" placeholder="Password..." />
+                              <label for="password">Password</label>
+                              <div class="invalid-feedback">Please enter password</div>
+                          </div>
+                          <div class="form-floating">
+                              <input class="form-control" name="password" id="password" type="password" placeholder="Username..." />
+                              <label for="password">Confirm Password</label>
+                              <div class="invalid-feedback">Please enter password</div>
+                          </div>
+                          <label for="usertype" style="padding: 10px 0px">User Type</label>
+      <div class="form-floating">
+        <select class="formcontrol" name="usertype" id="usertype">
+          <option value="driver">Driver</option>
+          <option value="examiner">Examiner</option>
+          <option value="admin">Admin</option>
+        </select>
+        <div class="invalid-feedback">
+          Please provide a User Type.
+        </div>
+      </div>
+      <br />
+      <% if (signUpMessage) { %>
+      <div class="mt-2 mb-3">
+        <div
+          class="alert alert-warning alert-dismissible fade show"
+          role="alert"
+        >
+          <strong><%= signUpMessage %></strong>
+        </div>
+      </div>
+      <% } %>
+      <button class="btn btn-primary text-uppercase" type="submit">
+        Sign Up
+      </button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+</main>
+<main
+class="mb-4"
+style="
+width: 40%;
+height: 67%;
+display: inline-block;
+border: 1px solid gray;
+"
+>
+<div class="container px-4 px-lg-5">
+<div class="row gx-4 gx-lg-5 justify-content-center">
+<div class="col-md-10 col-lg-8 col-xl-7">
+  <div class="my-5">
+    <form action="/users/login" method="POST" enctype="">
+      <h2>Login</h2>
+      <div class="form-floating">
+        <input
+          class="form-control"
+          name="username"
+          id="username"
+          type="text"
+          placeholder="Username..."
+        />
+        <label for="username">Username</label>
+                  </div>
+                  <div class="form-floating">
+                      <input class="form-control" name="password" id="password" type="password" placeholder="Username..." />
+                      <label for="password">Password</label>
+                  </div>
+                  <br />
+                  <!-- Submit Button-->
+                  <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Login</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+      </div>
+  </main>
+  <script>
+      function validation() {
+          var mainpassword = document.getElementById("password");
+          var repeatpassword = document.getElementById("password1");
+          if (mainpassword != repeatpassword) {
+              alert("Passwords did not match");
+          } else {
+              alert("Password created successfully");
+          }
+      }
+  </script>
+    <%- include ('layouts/footer'); -%>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('layouts/head'); -%>
+  <body>
+
+    <%- include ('layouts/header'); -%>
+    <%- include ('layouts/navigation'); -%>
+      
+    <main class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+              <h2 style="text-align:center;">G2 Test form</h2>
+              <div class="main">
+                <div class="container">
+                    <div class="form-content">
+                        <div class="form">
+                            <form class="requires-validation" id="form-validation" novalidate autocomplete="off" method="POST" action="/register">
+                              <h3>Perosonal Details</h3>
+                              <br>
+                              <div class="col-md-12 mb-3">
+                                <label for="fname">First Name</label>
+                                 <input class="form-control " type="text" name="fname" id="fname" placeholder="First Name" required>
+                                 <div class="invalid-feedback">First name is required.</div>    
+                              </div>
+  
+                              <div class="col-md-12 mb-3">
+                                <label for="lname">Last Name</label>
+                                  <input class="form-control" type="text" name="lname" id="lname" placeholder="Last Name" required>
+                                   <div class="invalid-feedback">Last name is required.</div>
+                              </div>
+  
+                              <div class="col-md-12 mb-3">
+                                <label for="licensenumber">License Number</label>
+                                <input class="form-control" type="text" name="licensenumber" id="licensenumber" placeholder="License Number" minlength="8" maxlength="8" required>
+                                 <div class="invalid-feedback">License number is not matched.</div>
+                            </div>
+  
+                            <div class="col-md-12 mb-3">
+                              <label for="age">Age</label>
+                              <input class="form-control" type="number" name="age" id="age" placeholder="Age" min="16" required>
+                               <div class="invalid-feedback">Age is required.</div>
+                          </div>
+
+                          <div class="col-md-12 mb-3">
+                            <label for="dob">Date of Birth</label>
+                            <input class="form-control" type="date" name="dob" id="dob" placeholder="Birth Date" value="2006-01-01" required min="1920-01-01" mix="2006-01-01"  >
+                             <div class="invalid-feedback">DOB is required.</div>
+                        </div>
+                        <br>
+                        <h3>Car Details</h3>
+                        <br>
+                        <div class="col-md-12 mb-3">
+                          <label for="make">Car Make</label>
+                           <input class="form-control " type="text" name="make" id="make" placeholder="Your car brand." required>
+                           <div class="invalid-feedback">Car make is required.</div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                          <label for="model">Car Model</label>
+                           <input class="form-control " type="text" name="model" id="model" placeholder="Your car Model." required>
+                           <div class="invalid-feedback">Car model is required.</div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                          <label for="year">Car Year</label>
+                          <input class="form-control" type="number" name="year" id="year" placeholder="Your car year" min="1990" max="2022" required>
+                           <div class="invalid-feedback">Car year is required.</div>
+                      </div>
+
+                      <div class="col-md-12 mb-3">
+                        <label for="platnumber">Plat Number</label>
+                        <input class="form-control" type="text" name="platnumber" id="platnumber" placeholder="Your Car Plat Number" required>
+                         <div class="invalid-feedback">Plat Number is required.</div>
+                    </div>
+  
+  
+                    <div class="form-button mt-3">
+                    <input id="submit" type="submit" class="btn btn-primary" value="Submit">
+                          </div>
+                          </form>
+                        </div>
+
+                        
+                    </div>
+                </div>
+        
+            </div>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include ('layouts/footer'); -%> 
+</body>
+</html>
